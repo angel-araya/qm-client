@@ -1,11 +1,11 @@
 <template>
-  <form action="index.html" method="post">
+  <div class='new-case-form'>
     <div class="row">
-      <div class="col-md-6 input-group">
+      <div class="col input-group">
         <span class="input-group-addon">Case ID</span>
         <input class='form-control' type="text" name="" value="">
       </div>
-      <div class="col-md-6 input-group">
+      <div class="col input-group">
         <span class='input-group-addon'>
           <input type="checkbox" name="" value="">
         </span>
@@ -14,11 +14,11 @@
     </div>
     <br>
     <div class="row">
-      <div class="col-md-6 input-group">
+      <div class="col input-group">
         <span class="input-group-addon">Assignee</span>
         <input class='form-control' type="text" name="" value="">
       </div>
-      <div class="col-md-6 input-group">
+      <div class="col input-group">
         <span class='input-group-addon'>
           <input type="checkbox" name="" value="">
         </span>
@@ -27,11 +27,11 @@
     </div>
     <br>
     <div class="row">
-      <div class="col-md-6 input-group">
+      <div class="col input-group">
         <span class="input-group-addon">Severity</span>
         <input class='form-control' type="text" name="" value="">
       </div>
-      <div class="col-md-6 input-group">
+      <div class="col input-group">
         <span class='input-group-addon'>
           <input type="checkbox" name="" value="">
         </span>
@@ -40,17 +40,22 @@
     </div>
     <br>
     <div>
-      <button class='btn btn-primary'>Submit</button>
+      <button v-on:click='insertNew' class='btn btn-primary'>Submit</button>
     </div>
-  </form>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'new-case-form',
-  data () {
+  data: function() {
     return {
 
+    }
+  },
+  methods: {
+    insertNew: function() {
+      this.$emit('insertNew')
     }
   }
 }

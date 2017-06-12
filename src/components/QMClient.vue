@@ -1,7 +1,7 @@
 <template>
   <div class='qm-client'>
-    <new-case-form></new-case-form>
-    <hr>
+    <new-case-form v-on:insertNew='insertNew'></new-case-form>
+    <br>
     <case-list></case-list>
   </div>
 </template>
@@ -9,9 +9,14 @@
 <script>
 export default {
   name: 'qm-client',
-  data () {
+  data: function () {
     return {
 
+    }
+  },
+  methods: {
+    insertNew: function() {
+      alert('Inseting new from QMClient')
     }
   }
 }
