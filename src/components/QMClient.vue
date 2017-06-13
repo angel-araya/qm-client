@@ -7,8 +7,14 @@
 </template>
 
 <script>
+import NewCaseForm from './NewCaseForm.vue'
+import CaseList from './CaseList.vue'
 export default {
   name: 'qm-client',
+  components: {
+    newCaseForm: NewCaseForm,
+    caseList: CaseList
+  },
   data: function () {
     return {
 
@@ -16,7 +22,6 @@ export default {
   },
   methods: {
     insertNew: function() {
-      alert('Inseting new from QMClient')
     }
   }
 }

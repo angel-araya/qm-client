@@ -20,12 +20,13 @@
 </template>
 
 <script>
-
 import CaseItem from './CaseItem.vue'
-
 export default {
   name: 'case-list',
-  data () {
+  components: {
+    caseItem: CaseItem
+  },
+  data: function () {
     return {
     }
   }

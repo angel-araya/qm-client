@@ -50,7 +50,6 @@ export default {
   name: 'new-case-form',
   data: function() {
     return {
-
     }
   },
   methods: {
