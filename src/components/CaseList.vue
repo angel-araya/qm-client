@@ -6,15 +6,25 @@
           <th>Date</th>
           <th>Case ID</th>
           <th>QM</th>
-          <th>Asignee</th>
+          <th>Assignee</th>
           <th>OT</th>
           <th>Severity</th>
           <th>Callback</th>
           <th>Elevation</th>
-          <th>FTS</th>
         </tr>
       </thead>
-      <case-item></case-item>
+      <tbody>
+        <tr v-for='item in cases'>
+          <td>{{item.date}}</td>
+          <td>{{item.caseID}}</td>
+          <td>{{item.qm}}</td>
+          <td>{{item.assignee}}</td>
+          <td>{{item.ot}}</td>
+          <td>{{item.severity}}</td>
+          <td>{{item.callback}}</td>
+          <td>{{item.elevation}}</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </template>
@@ -28,13 +38,23 @@ export default {
   },
   data: function () {
     return {
+      cases: []
     }
   },
   methods: {
   },
   mounted: function() {
-    this.eventHub.$on('insertNew', function() {
-      alert('INSERT NEW')
+    this.eventHub.$on('insertNew', caseInfo => {
+      this.cases.push({
+        date: caseInfo.date,
+        caseID: caseInfo.caseID,
+        qm: caseInfo.qm,
+        assignee: caseInfo.assignee,
+        ot: caseInfo.ot,
+        severity: caseInfo.severity,
+        callback: caseInfo.callback,
+        elevation: caseInfo.elevation
+      })
     })
   }
 }

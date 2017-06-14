@@ -15,17 +15,16 @@
 <script>
 export default {
   name: 'case-item',
-  data () {
+  data: function () {
     return {
-      date: new Date(),
-      caseID: 5320168498,
-      qm: 'Angel Araya',
-      assignee: 'Angel Araya',
-      ot: 'No',
-      severity: 2,
-      callback: 'No',
-      elevation: 'No',
-      fts: 'No'
+      date: '',
+      caseID: 0,
+      qm: '',
+      assignee: '',
+      ot: false,
+      severity: 0,
+      callback: false,
+      elevation: false
     }
   }
 }
