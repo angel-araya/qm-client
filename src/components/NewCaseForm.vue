@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     insertNew: function() {
-      this.$emit('insertNew')
+      this.eventHub.$emit('insertNew')
     }
   }
 }

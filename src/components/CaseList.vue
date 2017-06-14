@@ -29,6 +29,13 @@ export default {
   data: function () {
     return {
     }
+  },
+  methods: {
+  },
+  mounted: function() {
+    this.eventHub.$on('insertNew', function() {
+      alert('INSERT NEW')
+    })
   }
 }
 </script>

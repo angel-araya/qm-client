@@ -1,6 +1,6 @@
 <template>
   <div class='qm-client'>
-    <new-case-form v-on:insertNew='insertNew'></new-case-form>
+    <new-case-form></new-case-form>
     <br>
     <case-list></case-list>
   </div>
@@ -21,8 +21,6 @@ export default {
     }
   },
   methods: {
-    insertNew: function() {
-    }
   }
 }
 </script>
