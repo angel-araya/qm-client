@@ -36,14 +36,13 @@ export default {
   components: {
     caseItem: CaseItem
   },
-  data: function () {
+  data: function() {
     return {
       cases: []
     }
   },
-  methods: {
-  },
-  mounted: function() {
+  methods: {},
+  created: function() {
     this.eventHub.$on('insertNew', caseInfo => {
       this.cases.push({
         date: caseInfo.date,

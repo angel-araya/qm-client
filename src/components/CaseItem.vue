@@ -15,7 +15,7 @@
 <script>
 export default {
   name: 'case-item',
-  data: function () {
+  data: function() {
     return {
       date: '',
       caseID: 0,
@@ -26,7 +26,8 @@ export default {
       callback: false,
       elevation: false
     }
-  }
+  },
+  methods: {}
 }
 </script>
 
